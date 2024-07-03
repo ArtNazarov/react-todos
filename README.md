@@ -18,3 +18,4 @@ Implemented
 
 - [Run with StackBlitz](https://stackblitz.com/~/github.com/ArtNazarov/react-todos)
 - [Launch with CodeSandbox](https://codesandbox.io/p/github/ArtNazarov/react-todos/main)
+- [Run with Vercel](https://react-todos-virid.vercel.app/)

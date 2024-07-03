@@ -14,6 +14,7 @@ Implemented
 2) Install dependencies with npm install in project directory (there is located the file package.json)
 3) Execute npm start in project directory
 
-# Sandbox
+# Sandboxes
 
-[Run with StackBlitz](https://stackblitz.com/~/github.com/ArtNazarov/react-todos)
+- [Run with StackBlitz](https://stackblitz.com/~/github.com/ArtNazarov/react-todos)
+- [Launch with CodeSandbox](https://codesandbox.io/p/github/ArtNazarov/react-todos/main)

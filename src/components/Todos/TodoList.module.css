@@ -1,0 +1,11 @@
+.todoListContainer {
+    padding: 10px;
+}
+
+.todoListContainer .warning {
+   color: red;
+   background-color: aliceblue;
+   margin: 10px;
+   padding: 10px;
+   font-size:20px;
+}

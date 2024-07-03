@@ -2,7 +2,7 @@
 import './App.css';
 // Для модификации состояния нужен useState
 import { useState } from 'react';
-import { v4 as uuidv4 } from 'uuid';
+import _L from './Localization'
 // Импортируем форму и список (свои компоненты)
 import TodoForm from './components/Todos/TodoForm';
 import TodoList from './components/Todos/TodoList';
@@ -11,7 +11,7 @@ import {getInitialState, changerTasks, clearAllItems, addTodos} from './Models';
 
 function App() {
   
-  
+  const [lng, setLng] = useState('ru')
   // модель представления в виде состояния
   // и ее сеттер - начальное значение
   // список пуст
@@ -51,16 +51,17 @@ function App() {
     setTodos([...todos].filter(el => !el.complete ))
   }
 
-
+   
     // Компонент включает в себя форму для добавления и список
     // в форму функция для добавления передается
     // в компонент списка сам список (модель представления)
   return (
     <div className="App">
-      <h1>Мои заметки</h1>
+      <h1>{_L(lng).APP_HEADER}</h1>
       <TodosActionPanel helperDelCompleted={actionDelCompleted} helperClearAll={actionClearAll}></TodosActionPanel>
-      <TodoForm appender={appendTodo}></TodoForm>
+      <TodoForm lng={lng} appender={appendTodo}></TodoForm>
       <TodoList changer={actionChange} remover={actionRemove}  todos={todos}></TodoList>
+      <button onClick={(e) => setLng('ru')}>RU</button> <button onClick={(e)=>setLng('en')}>EN</button>
     </div>
   );
 }

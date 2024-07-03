@@ -20,8 +20,8 @@ function CustomButton({design, text, buttonIcon, listener}){
 
 
     function getDesign(design){
-        if (design == 'del') return styles.deleteIcon;
-        if (design == 'complete') return styles.checkIcon;
+        if (design === 'del') return styles.deleteIcon;
+        if (design === 'complete') return styles.checkIcon;
         return styles.custom_button
     }
 

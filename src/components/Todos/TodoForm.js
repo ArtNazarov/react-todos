@@ -1,7 +1,8 @@
 import { useState } from 'react';
+import _L from '../../Localization'
 import styles from './TodoForm.module.css'
 console.log(styles)
-function TodoForm({appender}){
+function TodoForm({lng, appender}){
     // модель представления формы
     // состоит из сообщения
     const [message, setMessage] = useState('')
@@ -24,8 +25,8 @@ function TodoForm({appender}){
     return (
         <div className={styles.todoFormContainer}>
             <form>
-                <input value={message} onChange={handlerChanger} placeholder='Введи задачу' />
-                <button onClick={handlerAdd} type="submit">Добавить</button>
+                <input value={message} onChange={handlerChanger} placeholder={_L(lng).INP_PLACEHOLDER} />
+                <button onClick={handlerAdd} type="submit">{_L(lng).BTN_ADD}</button>
             </form>
         </div>
     )
